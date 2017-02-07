@@ -38,7 +38,6 @@ h1{
 h2{
 	font-size: 5rem;
 	font-family: 'HKGroteskPro-semibold'; sans-serif;
-	color:#272727;
 
 }
 
@@ -130,6 +129,10 @@ p{
 	color:#FFF;
 }
 
+.charcoal{
+		color:#272727;
+}
+
 .rounded-corners{
 	border-radius: 0px 0px 3px 3px;
 }
@@ -137,22 +140,41 @@ p{
 /* Header
 ----------------------------------*/
 
-.header{
+.header-desktop{
 	padding:60px 60px 0 60px;
+}
+
+.social{
+	display: flex;
+}
+.social li{
+	padding-left:32px;
 }
 
 .header-content{
 	list-style:none;
 	display:flex;
-	/*----Do I want this?---------------------------------------DONT FORGET TO DECIDE-*/
 	margin:0; padding:0;
 }
 
-.header a{
+.header-mobile{
+	padding:60px 60px 0 60px;
+	display:none;
+}
+
+.header-desktop a{
 	color:#5B5B60;
 }
 
-.header a:hover{
+.header-desktop a:hover{
+	color:#FF6666;
+}
+
+.header-mobile a{
+	color:#5B5B60;
+}
+
+.header-mobile a:hover{
 	color:#FF6666;
 }
 
@@ -497,3 +519,54 @@ a{
 	max-width: 450px
 }
 
+.cto-text h2{
+font-size: 2.1875rem;
+	line-height: 55px;
+	padding-right: 15px;
+	max-width:450px;
+}
+
+.cto-text h4{
+	border-radius: 3px;
+	border-width: 2px;
+	border-style:solid;
+	color:white;
+	width: 100%;
+	max-width:145px;
+	padding:10px 45px 10px 45px;
+}
+
+
+/* Mobile
+----------------------------------*/
+@media only screen and (max-width: 750px) {
+.site-frame{
+	height:100%;
+	margin:0;padding:0;
+}
+
+.container {
+  max-width: 1440px;
+  height: 100%;
+  margin: 0px;
+  padding:0px;
+  margin: 0 auto;
+	z-index:-10;
+}
+html{
+	background:#fff;
+}
+
+}
+
+@media only screen and (max-width: 950px) {
+
+.header-desktop{
+	display:none;
+}
+
+.header-mobile{
+	display: block;
+}
+
+}

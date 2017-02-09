@@ -708,15 +708,3 @@ h1{
 }
 
 }
-
-@media only screen and (max-width: 1050px) {
-
-h1{
-	font-size: 6rem;
-}
-
-.project-title{
-	top:50px;
-}
-
-}

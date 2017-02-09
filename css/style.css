@@ -11,19 +11,19 @@ body{
 ----------------------------------*/
 @font-face {
     font-family: "HKGroteskPro-SemiBold";
-    src: url(fonts/HKGroteskPro-SemiBold.woff) format("woff");
+    src: url(../fonts/HKGroteskPro-SemiBold.woff) format("woff");
 }
 @font-face {
     font-family: "HKGroteskPro-Regular";
-    src: url(fonts/HKGroteskPro-Regular.woff) format("woff");
+    src: url(../fonts/HKGroteskPro-Regular.woff) format("woff");
 }
 @font-face {
     font-family: "HKGroteskPro-Light";
-    src: url(fonts/HKGroteskPro-Light.woff) format("woff");
+    src: url(../fonts/HKGroteskPro-Light.woff) format("woff");
 }
 @font-face {
     font-family: "HKGroteskPro-Black";
-    src: url(fonts/HKGroteskPro-Black.woff) format("woff");
+    src: url(../fonts/HKGroteskPro-Black.woff) format("woff");
 }
 /* White Site Frame
 ----------------------------------*/
@@ -42,7 +42,7 @@ h1{
 }
 h2{
 	font-size: 5rem;
-	font-family: 'HKGroteskPro-semibold'; sans-serif;
+	font-family: 'HKGroteskPro-Semibold'; sans-serif;
 
 }
 

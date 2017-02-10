@@ -38,6 +38,7 @@ h1{
 	font-size:7.5rem;
 	font-family: 'HKGroteskPro-SemiBold'; sans-serif;
 	color: #272727;
+	font-weight:normal;
 
 }
 h2{
@@ -250,7 +251,7 @@ ul.header-content{
 	display:flex;
 	max-width:1440px;
 	justify-content: center;
-	height:70vh;
+	height:700px;
 }
 
 .intro-text{

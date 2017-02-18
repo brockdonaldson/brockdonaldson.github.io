@@ -277,7 +277,7 @@ ul.header-content{
 	display:flex;
 	display:none;
 	max-width:1440px;
-	padding:170px 0 150px 0;
+	padding:170px 0 0px 0;
 	justify-content: center;
 	height:300px;
 }
@@ -341,7 +341,7 @@ ul.header-content{
 	position:relative;
 	width:100%;
 	left:50px;
-	max-height:470px;
+	max-width:725px;
 	align-self: center;
 	z-index: 2;
 }
@@ -747,6 +747,8 @@ a{
 /* Mobile
 ----------------------------------*/
 @media only screen and (max-width: 750px) {
+
+
 .site-frame{
 	height:100%;
 	margin:0;padding:0;
@@ -765,15 +767,21 @@ a{
 	padding: 140px 40px;
 	margin:50px 0 0 0;
 }
-
+.project-content{
+	padding:0;margin:0;
+}
 .project-text{
+	align-self: flex-start;
 	width: 80%;
 	right:0;
 }
 
 .project-image{
+	align-self: flex-start;
+	width:100%;
 	left:0px;
-	margin:40px;
+	padding:40px;
+	margin:0;
 }
 
 .project-text a{

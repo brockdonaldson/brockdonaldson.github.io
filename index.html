@@ -12,6 +12,11 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="icon" type="image/png" sizes="96x96" href="images/fav.png">
 
+  <script type="text/javascript" src="js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/ScrollMagic.js"></script>
+	<script type="text/javascript" src="js/animation.gsap.js"></script>
+
+
 </head>
 
 <body>
@@ -49,7 +54,7 @@
 
 			<!-- Intro
 			––––––––––––––––––––––––––––––-->
-
+			<div id=highlight-colour></div>
 			<div class="intro flex-header">
 				<div class="intro-text">
 					<h2>Hey. I’m Brock</h2><h3>UX/UI Designer and Aspiring Astronaut</h3>
@@ -65,7 +70,7 @@
 			<!-- Projects
 			––––––––––––––––––––––––––––––-->
 
-
+			<div class="spacer s1" id="trigger"></div>
 			<div class="project-container flex-center">
 				<div class="project-content flex-sb">
 					<div class="project-image">
@@ -77,18 +82,30 @@
 				</div>
 			</div>
 
-<!--
+			<div class="spacer s2" id="trigger2"></div>
 			<div class="project-container flex-center">
 				<div class="project-content flex-sb">
-				<div class="project-image">
-						<object type="image/svg+xml" data="images/KitsuneBoardHomeV2.svg"> Kitsune Board </object>
+					<div class="project-image">
+						<object type="image/svg+xml" data="images/KitsuneBoardHomeV2.svg"> Kitsune App </object>
 					</div>
 					<div class="project-text">
-						<h4>case study</h4><h2><a class="underline underline-blue" href="http://www.terrestriial.tumblr.com" target="_blank">The Kitsune Board</a></h2>
+						<h4>case study</h4><h2><a class="underline underline-blue" href="http://www.terrestriial.tumblr.com" target="_blank">The Kitsune App</a></h2>
 					</div>
 				</div>
 			</div>
--->
+
+			<div class="spacer s3s" id="trigger3"></div>
+			<div class="project-container flex-center">
+				<div class="project-content flex-sb">
+					<div class="project-image">
+						<object type="image/svg+xml" data="images/VitaAppHomeV2.svg"> Vita Health App </object>
+					</div>
+					<div class="project-text">
+						<h4>case study</h4><h2><a class="underline underline-red" href="http://www.terrestriial.tumblr.com" target="_blank">Vita Health App</a></h2>
+					</div>
+				</div>
+			</div>
+
 
 			<!-- About
 			––––––––––––––––––––––––––––––-->
@@ -194,6 +211,53 @@
 
   });
 });
+
+// init controller
+						var controller = new ScrollMagic.Controller();
+
+ 	var animateElem = document.getElementById("highlight-colour");
+			var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 600})
+							.on("enter", function () {
+								// trigger animation by changing inline style.
+								animateElem.style.backgroundColor = "";
+								animateElem.style.top = "950px";
+							})
+							.on("leave", function () {
+								// reset style
+								animateElem.style.backgroundColor = "";
+								animateElem.style.top = "";
+							})
+							.addIndicators({name: "2 - change inline style"}) // add indicators (requires plugin)
+							.addTo(controller);
+
+				var scene = new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 600})
+							.on("enter", function () {
+								// trigger animation by changing inline style.
+								animateElem.style.backgroundColor = "#62C1FC";
+								animateElem.style.top = "1660px";
+
+							})
+							.on("leave", function () {
+								// reset style
+								animateElem.style.backgroundColor = "";
+								animateElem.style.top = "950px";
+							})
+							.addIndicators({name: "2 - change inline style"}) // add indicators (requires plugin)
+							.addTo(controller);
+
+				var scene = new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 1500})
+							.on("enter", function () {
+								// trigger animation by changing inline style.
+								animateElem.style.backgroundColor = "#FF8989";
+								animateElem.style.top = "2370px";
+							})
+							.on("leave", function () {
+								// reset style
+								animateElem.style.backgroundColor = "";
+								animateElem.style.top = "1660px";
+							})
+							.addIndicators({name: "2 - change inline style"}) // add indicators (requires plugin)
+							.addTo(controller);
 
 </script>
 

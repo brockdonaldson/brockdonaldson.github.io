@@ -33,6 +33,7 @@ body{
 ----------------------------------*/
 .site-frame{
 	height:100%;
+	margin:45px 45px 0 45px;
 }
 
 .site-frame-home{
@@ -99,12 +100,27 @@ p{
   border-radius: 3px 3px 3px 3px;
   margin: 0 auto;
 	background:#fff;
-	z-index:1;
+
 }
 .spacer.s0{
 	min-height: 1px;
 }
+.spacer.s1{
+	min-height: 1px;
+	position: relative;
+	top:200px;
+}
+.spacer.s2{
+	min-height: 1px;
+	position: relative;
+	top:136px;
+}
 
+.spacer.s2{
+	min-height: 1px;
+	position: relative;
+	top:140px;
+}
 /* Flex Grids
 ----------------------------------*/
 .flex-header{
@@ -259,12 +275,25 @@ ul.header-content{
 
 /* Home Intro Section
 ----------------------------------*/
-
+#highlight-colour{
+	display:block;
+	position:absolute;
+	top:405px;
+	width:100%;
+	height:320px;
+	background-color:#FCEA62;
+	z-index:1;
+	-webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
 .intro{
 	display:flex;
 	max-width:1440px;
 	justify-content: center;
 	height:700px;
+	z-index: 2;
 }
 
 .intro-mobile{
@@ -283,15 +312,15 @@ ul.header-content{
 	align-items: center;
 	text-align:center;
 	padding:0;
+	z-index: 2;
 }
 
 .intro-text h2{
-	margin:0; padding:0;
+	margin:0; padding:40px 0;
 	font-weight: normal;
 }
 
 .intro-mobile-text{
-
 	display:flex;
 	justify-content: center;
 	flex-direction: column;
@@ -326,22 +355,45 @@ ul.header-content{
 }
 
 .project-image{
+	position:relative;
 	width:100%;
-	/* FIX THIS
-	left:50px;*/
+	left:50px;
 	max-width:725px;
-	z-index: 2;
+	z-index: 3;
 }
 
 .project-text{
+	position:relative;
 	max-width:330px;
 	right:50px;
-	z-index:3;
+	z-index:4;
 }
 
 .project-text h4{
 	font-family: 'HKGroteskPro-Medium'; sans-serif;
 	padding: 0 0 10px 0;
+}
+
+.projecttext{
+	position:relative;
+	max-width:330px;
+	right:50px;
+	z-index:4;
+}
+.projecttext h4{
+	font-family: 'HKGroteskPro-Medium'; sans-serif;
+	padding: 0 0 10px 0;
+}
+
+.projecttext h2{
+	padding:0;margin: 0;
+	letter-spacing: 0.125rem;
+	line-height: 70px;
+	display: inline-block;
+  position: relative;
+  padding-bottom: 0px;
+	font-weight: normal;
+	font-family: 'HKGroteskPro-Black'; sans-serif;
 }
 
 .project-text h2{
@@ -380,6 +432,10 @@ a{
 
 .underline-yellow{
 	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #F2C01C 50%);
+}
+
+.underline-white{
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #FFFFFF 50%);
 }
 
 
@@ -508,7 +564,13 @@ a{
 
 /* Project Page Header
 ----------------------------------*/
-
+.highlight-colour-project{
+	position:absolute;
+	top:405px;
+	width:100%;
+	height:420px;
+	z-index:1;
+}
 
 .project-header{
 	display:flex;
@@ -519,15 +581,26 @@ a{
 	width:100%;
 	padding:0;margin:0;
 	height:700px;
-	z-index: 1;
+	z-index: 3;
 }
 
-.project-header-img{
+
+.project-header-image{
 	position:absolute;
 	width:100%;
 }
 
-.project-header-img-container{
+.project-header-master{
+	display:flex;
+	justify-content:center;
+
+}
+
+.project-header-image-container{
+	display:flex;
+	padding:0;margin:0;
+	top:60px;
+	z-index: 2;
 	position:relative;
 	max-width: 1028px;
 	width:100%;
@@ -545,9 +618,23 @@ a{
 
 .project-title{
 	position:relative;
-	top:62px;
+	top:-34px;
 	padding:0 20px;margin:0;
 	z-index:3;
+}
+/* Gradient Background
+----------------------------------*/
+.gradient-section{
+	display:flex;
+	align-items: center;
+	width:100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+}
+
+.gradient-blue{
+	background: linear-gradient(-45deg, #0099EE, #0961BF);
 }
 
 /* Medium Container (930px)
@@ -729,6 +816,8 @@ a{
 }
 
 
+
+
 /* Mobile
 ----------------------------------*/
 @media only screen and (max-width: 750px) {
@@ -751,17 +840,24 @@ a{
 	padding:0;margin:0;
 }
 
+.project-header-image-container{
+	top:200px;
+}
+
 .project-container{
 	height:100vh;
 }
 
 .project-text{
-		align-self: flex-start;
+	align-self: flex-start;
 	padding:40px;
+	right:0;
 }
 
 .project-image{
 	margin:0; padding:40px;
+	box-sizing: border-box;
+	left:0;
 }
 
 .project-text a{
@@ -772,7 +868,9 @@ a{
 	color:#16161D;
 }
 
-
+#highlight-colour{
+	display:none;
+}
 
 .footer-container-mobile{
 	display:block;
@@ -803,7 +901,6 @@ a{
 
 .container {
   margin: 0 auto;
-	z-index:-10;
 }
 
 .section-full{
@@ -822,6 +919,7 @@ html{
 
 .medium-container{
 	padding:0 20px;
+	box-sizing:border-box;
 }
 
 .header-mobile{
@@ -909,9 +1007,6 @@ h4{
 	display:none;
 }
 
-.project-title{
-	top:108px;
-}
 
 h1{
 	font-size: 6.5rem;

@@ -11,10 +11,7 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="icon" type="image/png" sizes="96x96" href="images/fav.png">
 
-  <script type="text/javascript" src="js/TweenMax.min.js"></script>
-	<script type="text/javascript" src="js/ScrollMagic.js"></script>
-	<script type="text/javascript" src="js/animation.gsap.js"></script>
-	<script type="text/javascript" src="js/debug.addIndicators.js"></script>
+
 
 </head>
 
@@ -141,7 +138,7 @@
 			<div class="section-full flex-center">
 				<div class="pull-tech-color blue flex-center">
 					<div class="pull-quote flex-column">
-						<h4> Johnathan Ives </h4>
+						<h4> Johnathan Ive </h4>
 						<h2> There is beauty when something works and it works intuitively, and it doesn’t expect you to have to read an instruction book. </h2>
 					</div>
 				</div>
@@ -169,7 +166,7 @@
 					<p>I designed the general shape of the board to be 22’’ long and 6’’ wide at the apex. You’ll notice that near the front and back of the board there are two wider sections; this allows for the board to be better accommodating to individual foot placement.</p>
 
 					<p>Another key element that I wanted to explore was an idea based off the flat pack revolution. I looked for ways this product could be easily packed away and accessible. A key to this project is to focus the design around the user.</p>
-					<br>
+					<br><br><br>
 					<h4>[USER PERSONAS / JOB STORIES]</h4>
 					<p>In order to allow for a true understanding of the audience this product would be directed towards I created a few user personas to help identify the target audience.</p>
 
@@ -217,7 +214,7 @@
 
 			<div class="section-full flex-center">
 				<div class="pull-tech-color blue flex-center">
-					<div class="pull-tech  flex-sb">
+					<div class="pull-tech  flex-sa">
 						<div class="pull-tech-text">
 							<h4> [BRAND CREATION]</h4>
 							<p> The name Kitsune comes from the Japanese word for Fox. Common figures in Japanese folklore, the kitsune are often depicted as tricksters, but can also represent wisdom and transformation.</p>
@@ -274,7 +271,7 @@
 					<div class="pull-tech flex-sb">
 						<div class="cto-text white">
 							<h2>The companion app allows users to track ride stastitics in real time using installed hardware in the board.</h2>
-							<h4>View Case Study</h4>
+							<a href="kitsuneApp.html""><h4>View Case Study</h4></a>
 						</div>
 						<div class="pull-tech-drawing">
 							<object type="image/svg+xml" data="images/KitsuneAppCTO.svg"> Kitsune App CTO </object>
@@ -307,22 +304,29 @@
 	</div>
 
 
-
-<script src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/ScrollMagic.js"></script>
+	<script type="text/javascript" src="js/animation.gsap.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
  <script>
+
 
  	$(document).ready(function() {
   var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=brockdonaldson&api_key=b88a785049d6bd2a7c92fb9948c72b1b&format=json";
   $.getJSON(url, function(data) {
     var artist = data.recenttracks.track[0].artist["#text"];
     var song = data.recenttracks.track[0]["name"];
+    var player = artist + song;
 
-    $('.song-title').html(""+song+" \ ");
-    $('.song-artist').html("– " +artist+"\ ");
+    	if (window.innerWidth < 900 && player.length > 35) {
+    		song = song.substring (0,20)+"…";
+    	}
+    		$('.song-title').html(""+song+" \ ");
+   			$('.song-artist').html("– " +artist+"\ ");
 
   });
-});
 
+});
 
  	//Skateboard Parallax Scroll Effect-----------
 
@@ -385,6 +389,8 @@
 						$("form.move input[name=duration]:radio").change(function () {
 							scene.duration($(this).val());
 						});
+
+
 
  </script>
 

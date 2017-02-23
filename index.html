@@ -15,6 +15,7 @@
   <script type="text/javascript" src="js/TweenMax.min.js"></script>
 	<script type="text/javascript" src="js/ScrollMagic.js"></script>
 	<script type="text/javascript" src="js/animation.gsap.js"></script>
+	<script type="text/javascript" src="js/jquery.lazy.min.js"></script>
 
 
 </head>
@@ -195,6 +196,14 @@
 
 	<script src="js/jquery.min.js"></script>
  <script>
+
+  $(function() {
+          $('.lazy').lazy({
+            effect: "fadeIn",
+            effectTime: 1000,
+            threshold: 500
+          });
+      });
 
  	$(document).ready(function() {
   var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=brockdonaldson&api_key=b88a785049d6bd2a7c92fb9948c72b1b&format=json";

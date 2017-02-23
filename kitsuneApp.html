@@ -85,9 +85,9 @@
 
 			<div class="section-full flex-center">
 				<div class="gradient-section gradient-blue flex-center">
-					<div class="pull-tech  flex-sb">
-						<div class="pull-tech-drawing">
-							<object type="image/svg+xml" data="images/KitsuneBoardTech1.svg"> Kitsune App Technical Drawing (Folding) </object>
+					<div class="pull-tech flex-sb">
+						<div class="image-double-float">
+							<img src="images/KitsuneAppMockup1.png" alt="Kitsune App Angled Device Mockup">
 						</div>
 						<div class="pull-tech-text white">
 							<h2> Using the app is as simple as connecting to the board and downloading a recent trip. </h2>
@@ -194,7 +194,7 @@
 				<div class="pull-tech-color flex-center">
 					<div class="pull-tech-img flex-sb">
 						<div class="image-double">
-							<img src="images/KitsuneBoard2.png" alt="Kitsune Board Grip Close Up">
+							<img src="images/KitsuneAppMockup1.png" alt="Kitsune App Angled Device Mockup">
 						</div>
 						<div class="image-double">
 							<img src="images/KitsuneBoard3.png" alt="Kitsune Board Grip Close Up">
@@ -316,14 +316,18 @@
 <script src="js/jquery.min.js"></script>
  <script>
 
- 	$(document).ready(function() {
+ 		$(document).ready(function() {
   var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=brockdonaldson&api_key=b88a785049d6bd2a7c92fb9948c72b1b&format=json";
   $.getJSON(url, function(data) {
     var artist = data.recenttracks.track[0].artist["#text"];
     var song = data.recenttracks.track[0]["name"];
+    var player = artist + song;
 
-    $('.song-title').html(""+song+" \ ");
-    $('.song-artist').html("– " +artist+"\ ");
+    	if (window.innerWidth < 900 && player.length > 35) {
+    		song = song.substring (0,20)+"…";
+    	}
+    		$('.song-title').html(""+song+" \ ");
+   			$('.song-artist').html("– " +artist+"\ ");
 
   });
 });

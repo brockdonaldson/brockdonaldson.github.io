@@ -167,6 +167,10 @@ p{
 	background:#0099FF;
 }
 
+.red{
+	background:#EB2C47;
+}
+
 .white{
 	color:#FFF;
 }
@@ -255,7 +259,6 @@ ul.header-content{
 }
 
 .footer-container {
-  max-width: 1440px;
   height: 100%;
   padding:0px;
   margin:0 0 20px 0 ;
@@ -507,7 +510,7 @@ a{
 }
 
 .social-about li{
-	padding:48px 32px 0 0; margin:0;
+	padding:48px 32px 80px 0; margin:0;
 
 }
 
@@ -629,10 +632,11 @@ a{
 
 /* Gradient Background
 ----------------------------------*/
-.gradient-section{
+.gradient-section, .gradient-section-ipad{
 	display:flex;
 	align-items: center;
 	width:100%;
+	height:580px;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 	-o-font-smoothing: antialiased;
@@ -640,6 +644,10 @@ a{
 
 .gradient-blue{
 	background: linear-gradient(-45deg, #0099EE, #0961BF);
+}
+
+.gradient-red{
+	background: linear-gradient(-45deg, #E9304B, #F02443);
 }
 
 /* Medium Container (930px)
@@ -746,7 +754,11 @@ a{
 	width:100%;
 }
 
-.pull-tech-text h2{
+.pull-tech-text, .pull-tech-text-grad{
+	align-self: center;
+}
+
+.pull-tech-text h2, .pull-tech-text-grad h2{
 	font-size: 2.1875rem;
 	line-height: 55px;
 	padding-right: 15px;
@@ -812,9 +824,16 @@ a{
 
 .image-double-float img{
 	position:relative;
-	top:-150px;
 	width:100%;
+	padding:0 40px 0 0 ;
 	max-width: 450px
+}
+
+.image-double-float-ipad img{
+	position:relative;
+	width:100%;
+	padding:0 40px 0 0 ;
+	max-width: 650px
 }
 
 .cto-text h2{
@@ -894,6 +913,20 @@ a{
 	left:0;
 }
 
+.image-double-float img{
+	position:relative;
+	top:-125px;
+	width:100%;
+	max-width: 450px
+}
+
+.image-double-float-ipad img{
+	position:relative;
+	top:-125px;
+	width:100%;
+	max-width: 450px
+}
+
 .project-text a{
 	color:#16161D;
 }
@@ -904,6 +937,14 @@ a{
 
 #highlight-colour{
 	display:none;
+}
+.gradient-section{
+	height:950px;
+
+}
+
+.gradient-section-ipad{
+	height:850px;
 }
 
 .footer-container-mobile{
@@ -966,9 +1007,11 @@ html{
 .pull-tech-img{
 	margin:0;
 }
+
 .image-double img{
-	padding:20px 0 20px 0;
+	padding:20px 40px;
 	margin:0;
+	box-sizing: border-box;
 }
 
 
@@ -1002,6 +1045,11 @@ h4{
 	padding:0;
 }
 
+.pull-tech-text-grad h2{
+	position: relative;
+	top:-100px;
+	padding:0;
+}
 
 .pull-tech-drawing{
 	padding:30px 0 0 0;
@@ -1021,6 +1069,7 @@ h4{
 }
 .flex-center{
 	flex-direction:column;
+	align-items: center;
 }
 .pull-tech-drawing-c{
 	max-width: 150px;

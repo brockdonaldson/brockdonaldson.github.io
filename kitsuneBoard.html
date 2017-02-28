@@ -100,7 +100,7 @@
 
 			<div class="section-full flex-center">
 				<div class="image-span-container">
-					<img src="images/KitsuneboardSpan.png" alt="Kitsune Board Grip Close Up">
+					<img id="lazy" src="images/KitsuneboardSpan.png" alt="Kitsune Board Grip Close Up">
 				</div>
 			</div>
 
@@ -138,7 +138,7 @@
 			<div class="section-full flex-center">
 				<div class="pull-tech-color blue flex-center">
 					<div class="pull-quote flex-column">
-						<h4> Johnathan Ive </h4>
+						<h4> Johnathan Ive (Apple)</h4>
 						<h2> There is beauty when something works and it works intuitively, and it doesn’t expect you to have to read an instruction book. </h2>
 					</div>
 				</div>
@@ -166,7 +166,7 @@
 					<p>I designed the general shape of the board to be 22’’ long and 6’’ wide at the apex. You’ll notice that near the front and back of the board there are two wider sections; this allows for the board to be better accommodating to individual foot placement.</p>
 
 					<p>Another key element that I wanted to explore was an idea based off the flat pack revolution. I looked for ways this product could be easily packed away and accessible. A key to this project is to focus the design around the user.</p>
-					<br><br><br>
+					<br><br>
 					<h4>[USER PERSONAS / JOB STORIES]</h4>
 					<p>In order to allow for a true understanding of the audience this product would be directed towards I created a few user personas to help identify the target audience.</p>
 
@@ -182,7 +182,7 @@
 			</div>
 
 
-	<div class="section-full flex-center">
+			<div class="section-full flex-center">
 				<div class="pull-tech-color flex-center">
 					<div class="pull-tech-img flex-sb">
 						<div class="image-double">
@@ -243,7 +243,7 @@
 				<div class="pull-tech-color grey flex-center">
 					<div class="pull-tech flex-sb">
 						<div class="pull-tech-text charcoal">
-							<h2> Folding allows for ease of portability while at the same time helps create a stronger user & product relationship. </h2>
+							<h2> The bottom grip pattern of the board represents the nine tails of the Kitsune Fox. </h2>
 						</div>
 						<div class="pull-tech-drawing">
 							<object type="image/svg+xml" data="images/KitsuneBoardTech2.svg"> Kitsune App Technical Drawing (Folding) </object>
@@ -285,7 +285,7 @@
 
 		</div>
 
-		<div class="footer-container">
+		<div class="footer-container ">
 			<div class="footer">
 				<ul class="footer-content flex-sb">
 					<li><h5>Brock Donaldson © 2017</h5></li>
@@ -308,8 +308,9 @@
 	<script type="text/javascript" src="js/ScrollMagic.js"></script>
 	<script type="text/javascript" src="js/animation.gsap.js"></script>
 	<script type="text/javascript" src="js/jquery.min.js"></script>
- <script>
+  <script type="text/javascript" src="js/jquery.lazy.min.js"></script>
 
+ <script>
 
  	$(document).ready(function() {
   var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=brockdonaldson&api_key=b88a785049d6bd2a7c92fb9948c72b1b&format=json";
@@ -325,8 +326,8 @@
    			$('.song-artist').html("– " +artist+"\ ");
 
   });
-
 });
+
 
  	//Skateboard Parallax Scroll Effect-----------
 

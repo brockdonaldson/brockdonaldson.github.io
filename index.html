@@ -8,6 +8,13 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:url" content="http://brockdonaldson.co">
+	<meta property="og:title" content="Brock Donaldson; Design Portfolio">
+	<meta property="og:description" content="A collection of case studies">
+	<meta property="og:image" content="images/facebook.png">
+	<meta property="og:image:width" content="1200">
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="icon" type="image/png" sizes="96x96" href="images/fav.png">
@@ -16,7 +23,7 @@
 	<script type="text/javascript" src="js/ScrollMagic.js"></script>
 	<script type="text/javascript" src="js/animation.gsap.js"></script>
 	<script type="text/javascript" src="js/jquery.lazy.min.js"></script>
-
+	<script type="text/javascript" src="js/debug.addIndicators.js"></script>
 
 </head>
 
@@ -25,6 +32,11 @@
 	<div class="site-frame-home">
 
 		<div class="container">
+
+
+		<div class="spacer s1" id="trigger"></div>
+		<div class="spacer s2" id="trigger2"></div>
+		<div class="spacer s3" id="trigger3"></div>
 
 			<!-- Header (Desktop)
 			––––––––––––––––––––––––––––––-->
@@ -58,51 +70,51 @@
 			<div id=highlight-colour></div>
 			<div class="intro flex-header">
 				<div class="intro-text">
-					<h2>Hey. I’m Brock</h2><h3>UX/UI Designer and Aspiring Astronaut</h3>
+					<h2>Hey, I’m Brock</h2><h3>UX/UI Designer and Aspiring Astronaut</h3>
 				</div>
 			</div>
 
 			<div class="intro-mobile flex-header">
 				<div class="intro-mobile-text">
-					<h2>Hey.<br> I’m Brock</h2><h3>UX/UI Designer and Aspiring Astronaut</h3>
+					<h2>Hey,<br> I’m Brock</h2><h3>UX/UI Designer and Aspiring Astronaut</h3>
 				</div>
 			</div>
 
 			<!-- Projects
 			––––––––––––––––––––––––––––––-->
 
-			<div class="spacer s1" id="trigger"></div>
+
 			<div class="project-container flex-center">
 				<div class="project-content flex-sb">
 					<div class="project-image">
 						<object type="image/svg+xml" data="images/KitsuneAppHomeV2.svg"> Kitsune App </object>
 					</div>
-					<div class="project-text ">
-						<h4>case study</h4><h2><a class="underline underline-yellow" href="kitsuneApp.html" >The Kitsune App</a></h2>
+					<div class="project-text kitsune-app">
+						<h4 id="cS-1">case study</h4><h2><a class="underline underline-yellow" href="kitsuneApp.html" >The Kitsune App</a></h2>
 					</div>
 				</div>
 			</div>
 
-			<div class="spacer s2" id="trigger2"></div>
+
 			<div class="project-container flex-center">
 				<div class="project-content flex-sb">
 					<div class="project-image">
 						<object type="image/svg+xml" data="images/KitsuneBoardHomeV2.svg"> Kitsune Board </object>
 					</div>
 					<div class="project-text">
-						<h4>case study</h4><h2><a class="underline underline-blue" href="kitsuneBoard.html" target="_blank">The Kitsune App</a></h2>
+						<h4 id="cS-2">case study</h4><h2><a class="underline underline-blue" href="kitsuneBoard.html" target="_blank">The Kitsune Board</a></h2>
 					</div>
 				</div>
 			</div>
 
-			<div class="spacer s3s" id="trigger3"></div>
+
 			<div class="project-container flex-center">
 				<div class="project-content flex-sb">
 					<div class="project-image">
-						<object type="image/svg+xml" data="images/VitaAppHomeV2.svg"> Vita Health App </object>
+						<object type="image/svg+xml" data="images/VitaAppHomeV2.svg"> Vita Donor App </object>
 					</div>
 					<div class="project-text">
-						<h4>case study</h4><h2><a class="underline underline-red" href="http://www.terrestriial.tumblr.com" target="_blank">Vita Health App</a></h2>
+						<h4 id="cS-3">app design</h4><h2><a class="underline underline-red" href="vitaDonationApp.html">Vita Donor App</a></h2>
 					</div>
 				</div>
 			</div>
@@ -116,9 +128,8 @@
 
 					<h2> Houston? </h2>
 					<p>I’m Brock, a designer, space enthusiast, and an advocate for using design as a gateway to improve the lives of anyone and everyone. </h3>
-					<p> I'm drawn to things I'm passionate about and learning from my experiences. Whether it's reading about newly discovered planets or trying to decide if getting a cold brew at 4pm is the right decision, each pursuit helps to shape who I am on any given day.  </p>
-					<p>I currently live and work in Toronto, where I have been designing digital experiences at Konrad Group since my graduation from York / Sheridan’s Bachelor of Design program. I’ve recently re-entered the world of code and am working on some exiting side projects with my friends through a design collective called Smolhax.</p>
-					<p>I’m always open to trying new things or collaborating on projects. If you’d like to get ahold of me shoot over an email to brockmdonaldson@gmail.com. </p>
+					<p> I have always been drawn to understanding how people and products interact. Whether that’s myself struggling for the third time that day to pull a push door, or watching my friends decide if a cold brew at 4pm is the right decision, each makes me rethink the potential for better solutions.  </p>
+					<p>I live and work in Toronto, where I have been designing digital experiences at <a href="http://www.konradgroup.com" target="_blank"> Konrad Group </a> since my graduation from <a href="http://design.ampd.yorku.ca/" target="_blank"> York / Sheridan’s Bachelor of Design </a> program. I’ve also recently re-entered the world of code and am working on some exciting side projects with my friends through a design collective called <a href="http://smolhax.co" target="_blank"> Smolhax. </a></p>
 					<p>✌️️ </p>
 					<div class="social-about">
 						<ul class="social-links">
@@ -150,7 +161,7 @@
 									<li><a href="http://www.imdb.com/title/tt4846340" target="_blank"> // Hidden Figures </a></li>
 									<li><a href="http://www.imdb.com/title/tt0102057" target="_blank"> // Hook </a></li>
 									<li><a href="http://www.imdb.com/title/tt0433400" target="_blank"> // Just Friends </a></li>
-									<li><a href="http://www.imdb.com/title/tt0458352" target="_blank"> // The Devil Wears Prada </a></li>
+									<li><a href="http://www.imdb.com/title/tt0458352" target="_blank"> // The Devil Wears Prada</a></li>
 									<li><a href="http://www.imdb.com/title/tt0119116" target="_blank"> // The Fifth Element </a></li>
 									<li><a href="http://www.imdb.com/title/tt0157246" target="_blank"> // Will & Grace </a></li>
 								</ul>
@@ -165,16 +176,38 @@
 						<div class="reco-list flex-sb-links">
 							<div class="recommendations">
 								<ul class="reco-links">
-									<li><a href="http://www.imdb.com/title/tt1478338" target="_blank"> // Creative Confidence </a></li>
-									<li><a href="http://www.imdb.com/title/tt2395695" target="_blank"> // Design of Everyday Things </a></li>
-									<li><a href="http://www.imdb.com/title/tt1570728" target="_blank"> // Physics of the Impossible</a></li>
+								<li><a href="http://a.co/4hRaWbJ" target="_blank"> // Ready Player One </a></li>
+									<li><a href="http://a.co/h0zNgO5" target="_blank"> // Design of Everyday Things</a></li>
+									<li><a href="http://a.co/6sbzkLU" target="_blank"> // Physics of the Impossible</a></li>
 								</ul>
 							</div>
+							<div class="recommendations p-20">
+								<ul class="reco-links">
+									<li><a href="http://a.co/6Is8nbwv" target="_blank"> // Creative Confidence </a></li>
+									<li><a href="http://a.co/6ajIqUa" target="_blank"> // The Martian </a></li>
+									<li><a href="http://a.co/0s4bI3i" target="_blank"> // The Time Keeper </a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="recommendations-container flex-sb-links">
+						<div class="reco-title">
+							<h4> [LISTEN] <br> <br> SPRING <br>2017 </h4>
+						</div>
+						<div class="reco-list flex-sb-links">
 							<div class="recommendations">
 								<ul class="reco-links">
-									<li><a href="http://www.imdb.com/title/tt1282140" target="_blank"> // Ready Player One </a></li>
-									<li><a href="http://www.imdb.com/title/tt1798709" target="_blank"> // The Martian </a></li>
-									<li><a href="http://www.imdb.com/title/tt0813715" target="_blank"> // The Time Keeper </a></li>
+								<li><a href="https://open.spotify.com/artist/1wiBLzTI7z9RUwEpNPdFT6" target="_blank"> // Mase </a></li>
+									<li><a href="https://open.spotify.com/artist/2UwJRAgSOi1zcLkvUNc8XL" target="_blank"> // Anamanaguchi</a></li>
+									<li><a href="https://open.spotify.com/artist/4pb4rqWSoGUgxm63xmJ8xc" target="_blank"> // Madeon</a></li>
+								</ul>
+							</div>
+							<div class="recommendations p-75">
+								<ul class="reco-links">
+									<li><a href="https://macross82-99.bandcamp.com/" target="_blank"> // Macross 82-99 </a></li>
+									<li><a href="https://open.spotify.com/artist/30FDJPN3RtwJZ20g5YGCRX" target="_blank"> // Yung Bae </a></li>
+									<li><a href="https://open.spotify.com/artist/0Q2Tc5yZFJpumLMc7Yz4e4" target="_blank"> // Tomppabeats </a></li>
 								</ul>
 							</div>
 						</div>
@@ -211,22 +244,34 @@
   });
 });
 
+/*
 // init controller
 						var controller = new ScrollMagic.Controller();
 
+						//var kA = document.getElementsByClassName("project-container:first");
+						//var kAPosition = $("h4").position();
+						//alert(kAPosition)
+
+
  	var animateElem = document.getElementById("highlight-colour");
+ 	var caseStudy1 = document.getElementById("cS-1");
+ 	var caseStudy2 = document.getElementById("cS-2");
+ 	var caseStudy3 = document.getElementById("cS-3");
+
 			var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 600})
 							.on("enter", function () {
 								// trigger animation by changing inline style.
 								animateElem.style.backgroundColor = "";
-								animateElem.style.top = "950px";
+								animateElem.style.top =  "950px";
+								caseStudy1.style.color ="#272727";
 							})
 							.on("leave", function () {
 								// reset style
 								animateElem.style.backgroundColor = "";
 								animateElem.style.top = "";
+								caseStudy1.style.color ="";
 							})
-							.addIndicators({name: "2 - change inline style"}) // add indicators (requires plugin)
+							.addIndicators({name: "1 - Kitsune App"}) // add indicators (requires plugin)
 							.addTo(controller);
 
 				var scene = new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 600})
@@ -234,14 +279,15 @@
 								// trigger animation by changing inline style.
 								animateElem.style.backgroundColor = "#62C1FC";
 								animateElem.style.top = "1660px";
-
+								caseStudy2.style.color ="#272727";
 							})
 							.on("leave", function () {
 								// reset style
 								animateElem.style.backgroundColor = "";
 								animateElem.style.top = "950px";
+								caseStudy2.style.color ="";
 							})
-							.addIndicators({name: "2 - change inline style"}) // add indicators (requires plugin)
+							.addIndicators({name: "2 - Kitsune Board"}) // add indicators (requires plugin)
 							.addTo(controller);
 
 				var scene = new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 1500})
@@ -249,14 +295,18 @@
 								// trigger animation by changing inline style.
 								animateElem.style.backgroundColor = "#FF8989";
 								animateElem.style.top = "2370px";
+								caseStudy3.style.color ="#272727";
 							})
 							.on("leave", function () {
 								// reset style
 								animateElem.style.backgroundColor = "";
 								animateElem.style.top = "1660px";
+								caseStudy3.style.color ="";
 							})
-							.addIndicators({name: "2 - change inline style"}) // add indicators (requires plugin)
+							.addIndicators({name: "3 - Vita App"}) // add indicators (requires plugin)
 							.addTo(controller);
+
+							*/
 
 </script>
 

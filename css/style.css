@@ -89,6 +89,14 @@ p{
 	padding:10px 0;margin:0;
 }
 
+#cS-1, #cS-2, #cS-3{
+	-webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+
 /* Top Container
 ----------------------------------*/
 .container {
@@ -102,24 +110,22 @@ p{
 	background:#fff;
 
 }
-.spacer.s0{
-	min-height: 1px;
-}
+
 .spacer.s1{
 	min-height: 1px;
-	position: relative;
-	top:200px;
+	position: absolute;
+	top:1000px;
 }
 .spacer.s2{
 	min-height: 1px;
-	position: relative;
-	top:136px;
+	position: absolute;
+	top:1600px;
 }
 
-.spacer.s2{
+.spacer.s3{
 	min-height: 1px;
-	position: relative;
-	top:140px;
+	position: absolute;
+	top:2200px;
 }
 /* Flex Grids
 ----------------------------------*/
@@ -321,7 +327,7 @@ ul.header-content{
 }
 
 .intro-text h2{
-	margin:0; padding:40px 0;
+	margin:0; padding:40px 0 0 0;
 	font-weight: normal;
 }
 
@@ -440,7 +446,7 @@ a{
 }
 
 .underline-white{
-	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #FFFFFF 50%);
+	background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 50%, #Fff 50%);
 }
 
 
@@ -527,6 +533,16 @@ a{
 
 .recommendations{
 	padding:48px 0 0 0; margin:0;
+}
+
+.p-20{
+	position: relative;
+	left:-20px;
+}
+
+.p-75{
+	position: relative;
+	left:-77px;
 }
 
 .recommendations li{
@@ -656,6 +672,12 @@ a{
 .challenge-container{
 	position:relative;
 	padding: 270px 40px 50px 40px;
+	display:flex;
+}
+
+.learning-outcome-container{
+	position:relative;
+	padding: 150px 40px 50px 40px;
 	display:flex;
 }
 
@@ -903,12 +925,12 @@ a{
 }
 .project-text{
 	align-self: flex-start;
-	padding:40px;
+	padding:0px 40px 40px 40px;
 	right:0;
 }
 
 .project-image{
-	margin:0; padding:40px;
+	margin:0; padding: 40px 40px 10px 40px;
 	box-sizing: border-box;
 	left:0;
 }
@@ -955,7 +977,15 @@ a{
 	padding-top:40px;
 }
 
+.p-20{
+	position: relative;
+	left:0;
+}
 
+.p-75{
+	position: relative;
+	left:0px;
+}
 
 .footer-container{
 	display:none;

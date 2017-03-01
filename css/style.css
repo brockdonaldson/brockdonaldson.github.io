@@ -959,6 +959,10 @@ a{
 	color:#16161D;
 }
 
+a:link{
+	color:#16161D;
+}
+
 #highlight-colour{
 	display:none;
 }

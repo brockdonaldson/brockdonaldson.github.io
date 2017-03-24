@@ -17,14 +17,14 @@
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="icon" type="image/png" sizes="96x96" href="images/fav1.png">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/fav.png">
 
 
   <script type="text/javascript" src="js/TweenMax.min.js"></script>
 	<script type="text/javascript" src="js/ScrollMagic.js"></script>
 	<script type="text/javascript" src="js/animation.gsap.js"></script>
-	<script type="text/javascript" src="js/jquery.lazy.min.js"></script>
-	<script type="text/javascript" src="js/debug.addIndicators.js"></script>
+
 
 </head>
 
@@ -35,27 +35,24 @@
 		<div class="container">
 
 
-		<div class="spacer s1" id="trigger"></div>
-		<div class="spacer s2" id="trigger2"></div>
-		<div class="spacer s3" id="trigger3"></div>
 
-			<!-- Header (Desktop)
+
+				<!-- Header (Desktop)
 			––––––––––––––––––––––––––––––-->
-			<div class="header-desktop">
+			<div class="header-desktop hidden">
 				<ul class="header-content flex-header">
-					<li>Brock Donaldson</li>
+				<li>Brock Donaldson</li>
 					<div class="social"><li><a href="http://www.terrestriial.tumblr.com" target="_blank"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
 					<li><a href="http://www.instagram.com/brockmdonaldson" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-					<li><a href="https://open.spotify.com/user/donabroc" target="_blank"><span class="song-title"></span><span class="song-artist"></span></a></li>
+					<li><a href="https://open.spotify.com/user/donabroc" target="_blank"><span class="song-title" ></span><span class="song-artist"></span></a></li>
 					</div>
 				</ul>
 			</div>
-
 			<!-- Header (Mobile)
 			––––––––––––––––––––––––––––––-->
-			<div class="header-mobile">
+				<div class="header-mobile">
 				<ul class="header-content flex-header">
-					<li>Brock Donaldson</li>
+					<a href="index.html"><li>Brock Donaldson</li></a>
 					<div class="social">
 						<li><a href="http://www.terrestriial.tumblr.com" target="_blank"><i class="fa fa-tumblr" aria-hidden="true"></i></a></li>
 						<li><a href="http://www.instagram.com/brockmdonaldson" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -66,12 +63,13 @@
 
 
 
+
 			<!-- Intro
 			––––––––––––––––––––––––––––––-->
-			<div id=highlight-colour></div>
+			<div class="highlight-colour"></div>
 			<div class="intro flex-header">
 				<div class="intro-text">
-					<h2>Hey, I’m Brock</h2><h3>UX/UI Designer and Aspiring Astronaut</h3>
+					<h2 class="intro-h2 hidden">Hey, I’m Brock</h2><h3 class="intro-h3 hidden">UX/UI Designer and Aspiring Astronaut</h3>
 				</div>
 			</div>
 
@@ -84,9 +82,12 @@
 			<!-- Projects
 			––––––––––––––––––––––––––––––-->
 
-
+<div class="animation-projects hidden">
 			<div class="project-container flex-center">
 				<div class="project-content flex-sb">
+					<div class="project-image-mobile">
+						<a href="kitsuneApp.html"><img src="images/KitsuneAppHomeM.png" alt="Kitsune App"></a>
+					</div>
 					<div class="project-image">
 						<object type="image/svg+xml" data="images/KitsuneAppHomeV2.svg"> Kitsune App </object>
 					</div>
@@ -99,11 +100,14 @@
 
 			<div class="project-container flex-center">
 				<div class="project-content flex-sb">
+					<div class="project-image-mobile">
+						<a href="kitsuneBoard.html"><img src="images/KitsuneBoardHomeM.png" alt="Kitsune Board"></a>
+					</div>
 					<div class="project-image">
 						<object type="image/svg+xml" data="images/KitsuneBoardHomeV2.svg"> Kitsune Board </object>
 					</div>
 					<div class="project-text">
-						<h4 id="cS-2">case study</h4><h2><a class="underline underline-blue" href="kitsuneBoard.html" target="_blank">The Kitsune Board</a></h2>
+						<h4 id="cS-2">case study</h4><h2><a class="underline underline-blue" href="kitsuneBoard.html">The Kitsune Board</a></h2>
 					</div>
 				</div>
 			</div>
@@ -111,6 +115,9 @@
 
 			<div class="project-container flex-center">
 				<div class="project-content flex-sb">
+					<div class="project-image-mobile">
+						<a href="vitaDonationApp.html.html"><img src="images/VitaAppHomeM.png" alt="Vita Donor App"></a>
+					</div>
 					<div class="project-image">
 						<object type="image/svg+xml" data="images/VitaAppHomeV2.svg"> Vita Donor App </object>
 					</div>
@@ -120,15 +127,15 @@
 				</div>
 			</div>
 
-
+</div>
 			<!-- About
 			––––––––––––––––––––––––––––––-->
-
-			<div class="about-container flex-center">
+<div class="animation-about hidden">
+			<div class="about-container flex-center ">
 				<div class="about-content">
 
 					<h2> …houston? </h2>
-					<p class="larger-p">I’m a designer, space enthusiast, and an advocate for using design as a gateway to improve the lives of anyone and everyone. <!-- and a people watcher --> </h3>
+					<p class="larger-p">I’m a designer, space enthusiast, <!--and an advocate for using design as a practice to improve quality of life.-->and people watcher. </h3>
 					<p> I have always been drawn to understanding how people and products interact. Whether that’s myself struggling for the third time that day to pull a push door, or watching my friends decide if a cold brew at 4pm is the right decision, each makes me rethink the potential for better solutions.  </p>
 					<p>I live and work in Toronto, where I have been designing digital experiences at <a href="http://www.konradgroup.com" target="_blank">Konrad Group</a> since my graduation from <a href="http://design.ampd.yorku.ca/" target="_blank"> York / Sheridan’s Bachelor of Design</a> program. I’ve also recently re-entered the world of code and am working on some exciting side projects with my friends through a design collective called <a href="http://smolhax.co" target="_blank"> Smolhax. </a></p>
 					<p>✌️️ </p>
@@ -138,7 +145,7 @@
 							<li><a href="http://www.instagram.com/brockmdonaldson" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 							<li><a href="https://open.spotify.com/user/donabroc" target="_blank"><i class="fa fa-spotify" aria-hidden="true"></i></a></li>
 							<li><a href="https://www.linkedin.com/in/brockdonaldson" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-							<li><a href="https://www.twitter.com/donaldsonbrock" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.twitter.com/brockmdonaldson" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 						</ul>
 					</div>
 
@@ -214,7 +221,7 @@
 						</div>
 					</div>
 
-
+</div>
 
 	<!-- Closing Frame Divs
 			––––––––––––––––––––––––––––––-->
@@ -228,8 +235,31 @@
 	<script src="js/jquery.min.js"></script>
  <script>
 
+window.onload = function() {
+    if (window.jQuery) {
+        // jQuery is loaded
+      $(".header-desktop").removeClass("hidden");
+   		$(".header-desktop").addClass("animated fadeIn");
+   		$(".intro-h2").removeClass("hidden");
+   		$(".intro-h2").addClass("animated fadeIn");
+   		$(".intro-h3").removeClass("hidden");
+   		$(".intro-h3").addClass("animated fadeIn")
+   		$(".highlight-colour").addClass("extend");
+
+    } else {
+        // jQuery is not loaded
+        alert("Doesn't Work");
+    }
+}
+			$(".animation-projects").removeClass("hidden");
+   		$(".animation-projects").addClass("animated fadeIn");
+   		$(".animation-about").removeClass("hidden");
+   		$(".animation-about").addClass("animated fadeIn");
+
+
 
  	$(document).ready(function() {
+
   var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=brockdonaldson&api_key=b88a785049d6bd2a7c92fb9948c72b1b&format=json";
   $.getJSON(url, function(data) {
     var artist = data.recenttracks.track[0].artist["#text"];
@@ -243,71 +273,20 @@
    			$('.song-artist').html("– " +artist+"\ ");
 
   });
+
+
 });
 
-/*
-// init controller
-						var controller = new ScrollMagic.Controller();
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-						//var kA = document.getElementsByClassName("project-container:first");
-						//var kAPosition = $("h4").position();
-						//alert(kAPosition)
+  ga('create', 'UA-93761611-1', 'auto');
+  ga('send', 'pageview');
 
 
- 	var animateElem = document.getElementById("highlight-colour");
- 	var caseStudy1 = document.getElementById("cS-1");
- 	var caseStudy2 = document.getElementById("cS-2");
- 	var caseStudy3 = document.getElementById("cS-3");
 
-			var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 600})
-							.on("enter", function () {
-								// trigger animation by changing inline style.
-								animateElem.style.backgroundColor = "";
-								animateElem.style.top =  "950px";
-								caseStudy1.style.color ="#272727";
-							})
-							.on("leave", function () {
-								// reset style
-								animateElem.style.backgroundColor = "";
-								animateElem.style.top = "";
-								caseStudy1.style.color ="";
-							})
-							.addIndicators({name: "1 - Kitsune App"}) // add indicators (requires plugin)
-							.addTo(controller);
-
-				var scene = new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 600})
-							.on("enter", function () {
-								// trigger animation by changing inline style.
-								animateElem.style.backgroundColor = "#62C1FC";
-								animateElem.style.top = "1660px";
-								caseStudy2.style.color ="#272727";
-							})
-							.on("leave", function () {
-								// reset style
-								animateElem.style.backgroundColor = "";
-								animateElem.style.top = "950px";
-								caseStudy2.style.color ="";
-							})
-							.addIndicators({name: "2 - Kitsune Board"}) // add indicators (requires plugin)
-							.addTo(controller);
-
-				var scene = new ScrollMagic.Scene({triggerElement: "#trigger3", duration: 1500})
-							.on("enter", function () {
-								// trigger animation by changing inline style.
-								animateElem.style.backgroundColor = "#FF8989";
-								animateElem.style.top = "2370px";
-								caseStudy3.style.color ="#272727";
-							})
-							.on("leave", function () {
-								// reset style
-								animateElem.style.backgroundColor = "";
-								animateElem.style.top = "1660px";
-								caseStudy3.style.color ="";
-							})
-							.addIndicators({name: "3 - Vita App"}) // add indicators (requires plugin)
-							.addTo(controller);
-
-							*/
 
 </script>
 

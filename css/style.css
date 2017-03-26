@@ -292,7 +292,6 @@ ul.header-content{
 /* Home Intro Section
 ----------------------------------*/
 .highlight-colour{
-	animation-delay: 1.5s;
 	position:absolute;
 	top:405px;
 	width:100%;
@@ -332,7 +331,7 @@ ul.header-content{
 }
 
 .animation-projects{
-	animation-delay:1.5s;
+	animation-delay:1.3s;
 }
 
 .intro-h2{
@@ -340,7 +339,7 @@ ul.header-content{
 }
 
 .animation-about{
-	animation-delay: 2.0s;
+	animation-delay: 1.3s;
 }
 
 
@@ -684,7 +683,7 @@ p.larger-p{
 }
 
 .project-title{
-	animation-delay: .6s;
+	animation-delay: .3s;
 	position:relative;
 	padding:0 20px;margin:0;
 	top:-19px;
@@ -1055,7 +1054,7 @@ p.larger-p{
 	color:#16161D;
 }
 
-#highlight-colour{
+.highlight-colour{
 	display:none;
 }
 

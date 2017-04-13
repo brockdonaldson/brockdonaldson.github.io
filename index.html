@@ -89,20 +89,6 @@
 			<div class="project-container flex-center">
 				<div class="project-content flex-sb">
 					<div class="project-image-mobile">
-						<a href="kitsuneBoard.html"><img src="images/KitsuneBoardHomeM.png" alt="Kitsune Board"></a>
-					</div>
-					<div class="project-image">
-						<object type="image/svg+xml" data="images/KitsuneBoardHomeV2.svg"> Kitsune Board </object>
-					</div>
-					<div class="project-text">
-						<h4 id="cS-2">case study</h4><h2><a class="underline underline-blue" href="kitsuneBoard.html">The Kitsune Board</a></h2>
-					</div>
-				</div>
-			</div>
-
-			<div class="project-container flex-center">
-				<div class="project-content flex-sb">
-					<div class="project-image-mobile">
 						<a href="kitsuneApp.html"><img src="images/KitsuneAppHomeM.png" alt="Kitsune App"></a>
 					</div>
 					<div class="project-image">
@@ -110,6 +96,20 @@
 					</div>
 					<div class="project-text kitsune-app">
 						<h4 id="cS-1">case study</h4><h2><a class="underline underline-yellow" href="kitsuneApp.html" >The Kitsune App</a></h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="project-container flex-center">
+				<div class="project-content flex-sb">
+					<div class="project-image-mobile">
+						<a href="kitsuneBoard.html"><img src="images/KitsuneBoardHomeM.png" alt="Kitsune Board"></a>
+					</div>
+					<div class="project-image">
+						<object type="image/svg+xml" data="images/KitsuneBoardHomeV2.svg"> Kitsune Board </object>
+					</div>
+					<div class="project-text">
+						<h4 id="cS-2">case study</h4><h2><a class="underline underline-blue" href="kitsuneBoard.html">The Kitsune Board</a></h2>
 					</div>
 				</div>
 			</div>
@@ -241,6 +241,12 @@
 
 window.onload = function() {
     if (window.jQuery) {
+    	$(".highlight-colour").addClass("extend");
+    }
+  }
+
+	$(document).ready(function() {
+
         // jQuery is loaded
       $(".header-desktop").removeClass("hidden");
    		$(".header-desktop").addClass("animated fadeInDown");
@@ -248,11 +254,7 @@ window.onload = function() {
    		$(".intro-h2").addClass("animated fadeIn")
    		$(".intro-h3").removeClass("hidden");
    		$(".intro-h3").addClass("animated fadeIn")
-   		$(".highlight-colour").addClass("extend");
-
-    } else {
-    }
-}
+});
 			$(".animation-projects").removeClass("hidden");
    		$(".animation-projects").addClass("animated fadeIn");
    		$(".animation-about").removeClass("hidden");

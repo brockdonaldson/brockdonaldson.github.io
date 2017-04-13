@@ -344,23 +344,7 @@
 
  <script>
 
- window.onload = function() {
-    if (window.jQuery) {
-        // jQuery is loaded
-      $(".header-desktop").removeClass("hidden");
-   		$(".header-desktop").addClass("animated fadeInDown");
-   		$(".project-header-image").removeClass("hidden");
-   		$(".project-header-image").addClass("animated fadeIn");
-   		$(".project-title").removeClass("hidden");
-   		$(".project-title").addClass("animated fadeIn")
-
-    } else {
-        // jQuery is not loaded
-        alert("Doesn't Work");
-    }
-}
-
- 	$(document).ready(function() {
+$(document).ready(function() {
   var url = "http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=brockdonaldson&api_key=b88a785049d6bd2a7c92fb9948c72b1b&format=json";
   $.getJSON(url, function(data) {
     var artist = data.recenttracks.track[0].artist["#text"];
@@ -374,6 +358,18 @@
    			$('.song-artist').html("– " +artist+"\ ");
 
   });
+
+});
+
+$(document).ready(function() {
+
+      $(".header-desktop").removeClass("hidden");
+   		$(".header-desktop").addClass("animated fadeInDown");
+   		$(".project-header-image").removeClass("hidden");
+   		$(".project-header-image").addClass("animated fadeIn");
+   		$(".project-title").removeClass("hidden");
+   		$(".project-title").addClass("animated fadeIn");
+
 });
 
 

@@ -1,6 +1,6 @@
 html{
 	height: 100%;
-	background:#EEEEEE; /* OR f4f4f4 */
+	background:#FAFAFA; /* OR f4f4f4 */
 }
 
 body{
@@ -112,7 +112,6 @@ p{
   border-radius: 3px 3px 3px 3px;
   margin: 0 auto;
 	background:#fff;
-
 }
 
 .spacer.s1{

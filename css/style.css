@@ -1356,7 +1356,7 @@ p a:hover{
 		top:calc(-850px + 45vw);
 	}
 
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 1150px) {
 	
 	.intro{
 		flex-direction:column;

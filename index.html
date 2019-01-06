@@ -417,7 +417,7 @@ $(function(){
   var nextSlideIndicator = 1;
   var nextSlideText=document.getElementById("nextSlideNumber");
 
-  var timer = setInterval(rightTransition, 8000);
+  var timer = setInterval(rightTransition, 7000);
   var timerLine = document.getElementById("blackLine");
   var ms = 0
   var testNumber = null;
@@ -427,7 +427,7 @@ $(function(){
 
   		function startWatch(){
 			ms += 1;
-			var lineMath= ms * 0.05 - 100;
+			var lineMath= ms * 0.06 - 100;
 			timerLine.style.left = lineMath + '%'; 
 		}
 
@@ -453,7 +453,7 @@ $(function(){
     	currentSlideText.innerHTML = '0'+ currentSlideIndicator;
 	}
     
-	timer = setInterval(rightTransition, 8000);
+	timer = setInterval(rightTransition, 7000);
     }
 
   $('#moveRight').on('click', rightTransition);
@@ -480,7 +480,7 @@ $(function(){
 	}
     
    
-	timer = setInterval(rightTransition, 8000);
+	timer = setInterval(rightTransition, 7000);
   };
   function setSlide(prev, next){
     var slide= current;

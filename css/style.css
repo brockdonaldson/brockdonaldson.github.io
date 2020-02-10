@@ -414,6 +414,7 @@ ul.header-content{
 
 .intro-h3{
 	animation-delay:.3s;
+	margin:0px;
 	max-width: 808px;
 }
 

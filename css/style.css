@@ -419,7 +419,7 @@ ul.header-content{
 }
 
 .intro-text h2{
-	margin:0;
+	margin:0 0 16px;
 	letter-spacing: -1px;
 	word-spacing: -10px;
 	font-weight: normal;
@@ -1229,7 +1229,7 @@ p a:hover{
 	border: 1px solid #FF6666;
 	background-image: linear-gradient(135deg, #FF6666 50%, transparent 51%);
 	padding: 12px 24px;
-	margin-top: 15px;
+	margin-top: 48px;
 	left:-5px;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;

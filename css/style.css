@@ -1,5 +1,6 @@
 html{
 	height: 100%;
+	overflow-x: hidden;
 	background:#FAFAFA; /* OR f4f4f4 */
 }
 

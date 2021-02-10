@@ -390,6 +390,9 @@ $(document).ready(function() {
     	if (window.innerWidth < 900 && player.length > 35) {
     		song = song.substring (0,20)+"…";
     	}
+    	if (player.length > 50) {
+    		song = song.substring (0,20)+"…";
+    	}
     		$('.song-title').html(""+song+" \ ");
    			$('.song-artist').html("– " +artist+"\ ");
    			document.getElementById('song-link').href = songLink;

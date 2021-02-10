@@ -1,10 +1,12 @@
 html{
 	height: 100%;
-	overflow-x: hidden;
+	overflow-x:hidden;
 	background:#FAFAFA; /* OR f4f4f4 */
 }
 
 body{
+	position:relative;
+	overflow-x:hidden;
 	margin:0;
 }
 
@@ -362,7 +364,7 @@ ul.header-content{
 	z-index: -1;
 	left:50vw;
 	top:-64px;
-	background: #fff;
+	background: rgba(255, 0, 0, 0);
 	border:2px solid #FF6666;
 	border-radius:50%;
 	width: 70vw;

@@ -1,9 +1,9 @@
 <!--
 
-         ``       .``///:///:yyyyyyy:///:///``.
-         ````    ossymmdhdddydmmmmmmddddhhmmdssh.
-          ```` .oyyhmmmmmddhhdddddddhhdddmmmmdyyh:
-            .:+hdhyhmmdhhhhdddhdddhdddhhyhhmmdyyhds/.
+         \\       .``///:///:yyyyyyy:///:///``.
+         \\\\    ossymmdhdddydmmmmmmddddhhmmdssh.
+         \\\\\ .oyyhmmmmmddhhdddddddhhdddmmmmdyyh:
+         \\\\\\.:+hdhyhmmdhhhhdddhdddhdddhhyhhmmdyyhds/.
       ..-:+oyyyyhddyyhddhhhmdsyymhsyhmdmNmmhhyhddhyyyys+:-`
      :ssssyyhhddhyhhdhhdhsyhmhddmmdhddddmMmmmdyhhhddhhyyyyys`
     `ohhddmmmmmdhhddmyshmdhyso+///++syhdmmdmNMNmyhmmmmmmdhhy:
@@ -46,6 +46,8 @@
 	<meta property="og:image:width" content="1200">
 
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/all.min.css">
    <link rel="stylesheet" href="css/animate.min.css">
 
   <link rel="icon" type="image/png" sizes="96x96" href="images/fav.png">
@@ -67,9 +69,11 @@
 			<div class="header-desktop hidden">
 				<ul class="header-content flex-header">
 					<a href="index.html"><li>Brock Donaldson</li></a>
-					<div class="social"><li><a href="http://www.twitter.com/brockmdonaldson" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li><a href="http://www.instagram.com/brockmdonaldson" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-					<li><a href="https://open.spotify.com/user/donabroc" target="_blank"><span class="song-title" ></span><span class="song-artist"></span></a></li>
+					<div class="social" >
+					<li><a href="http://www.twitter.com/brockmdonaldson" target="_blank"><i class="fab fa-twitter" aria-hidden="true" ></i></a></li>
+					<li><a href="http://www.instagram.com/brockmdonaldson" target="_blank"><i class="fab fa-instagram" aria-hidden="true" ></i></a></li>
+					<li ><a href="#" id="song-link" target="_blank" ><i class="fas fa-compact-disc fa-spin"  style="margin-right: 8px;color:#f66666;" color=#f66666;></i><span class="song-title" ></span><span class="song-artist"></span></a></li>
+
 					</div>
 				</ul>
 			</div>
@@ -302,7 +306,7 @@
 		<div class="footer-container">
 			<div class="footer">
 				<ul class="footer-content flex-sb">
-					<li><h5>Brock Donaldson © 2020</h5></li>
+					<li><h5>Brock Donaldson © 2021</h5></li>
 
 				</ul>
 			</div>
@@ -311,7 +315,7 @@
 		<div class="footer-container-mobile">
 			<div class="footer">
 				<ul class="footer-content flex-sb">
-					<li><h5>Brock Donaldson © 2020</h5></li>
+					<li><h5>Brock Donaldson © 2021</h5></li>
 			</div>
 		</div>
 
@@ -347,6 +351,7 @@ $(document).ready(function() {
   $.getJSON(url, function(data) {
     var artist = data.recenttracks.track[0].artist["#text"];
     var song = data.recenttracks.track[0]["name"];
+    var songLink = data.recenttracks.track[0]["url"];
     var player = artist + song;
 
     	if (window.innerWidth < 900 && player.length > 35) {
@@ -354,6 +359,7 @@ $(document).ready(function() {
     	}
     		$('.song-title').html(""+song+" \ ");
    			$('.song-artist').html("– " +artist+"\ ");
+   			document.getElementById('song-link').href = songLink;
 
   });
 });

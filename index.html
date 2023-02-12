@@ -168,7 +168,7 @@
 				<div class="carousel-line">
 					<div class="carousel-timer" id="blackLine"></div>
 				</div>
-				<h3 class="grey-text "id="nextSlideNumber">03</h3><div class="arrowR" id="moveRight" ></div>
+				<h3 class="grey-text "id="nextSlideNumber">02</h3><div class="arrowR" id="moveRight" ></div>
 			</div>
 	</div>
 			
@@ -461,11 +461,14 @@ $(function(){
 
     if (currentSlideIndicator<3) {
     	currentSlideIndicator++;
-    	currentSlideText.innerHTML = '0'+ currentSlideIndicator;
+    	++nextSlideIndicator;
+     	currentSlideText.innerHTML = '0'+ currentSlideIndicator;
+    	nextSlideText.innerHTML = '0' + (currentSlideIndicator + 1);
 	}  
 	else {
     	currentSlideIndicator = 1;
     	currentSlideText.innerHTML = '0'+ currentSlideIndicator;
+    	nextSlideText.innerHTML = '0' + (nextSlideIndicator - currentSlideIndicator);
 	}
     
 	timer = setInterval(rightTransition, 7000);
@@ -488,9 +491,12 @@ $(function(){
     if (currentSlideIndicator>1) {
     	currentSlideIndicator--;
     	currentSlideText.innerHTML = '0'+ currentSlideIndicator;
+    	nextSlideText.innerHTML = '0' + (currentSlideIndicator + 1);
 	} else{
     	currentSlideIndicator=3
+    	nextSlideIndicator--;
     	currentSlideText.innerHTML = '0'+ currentSlideIndicator;
+    	nextSlideText.innerHTML = '0' + (currentSlideIndicator + 1);
     	
 	}
     

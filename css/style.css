@@ -225,6 +225,10 @@ p{
 	background:#EB2C47;
 }
 
+.green{
+	background:#0e6b5c;
+}
+
 .white{
 	color:#FFF;
 }
@@ -1351,14 +1355,7 @@ p a:hover{
 	}
 }
 
-@media only screen and (max-width: 1700px) and (max-height:1366px) {
-	.carousel-big{
-		height:calc(500px + 20vw);
-		min-height: initial;
-	}
-	.carousel-selector{
-		top:calc(-850px + 45vw);
-	}
+
 
 @media only screen and (max-width: 1150px) {
 	
